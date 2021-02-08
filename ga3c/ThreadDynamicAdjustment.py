@@ -86,7 +86,7 @@ class ThreadDynamicAdjustment(Thread):
         self.server.stats.agent_count.value = self.agent_count
 
     def run(self):
-        self.enable_disable_components()
+        self.enable_disable_components()  # add trainers here
         self.update_stats()
 
         if not self.enabled:

@@ -108,7 +108,7 @@ class ProcessAgent(Process):
 
                 updated_exps = ProcessAgent._accumulate_rewards(experiences, self.discount_factor, terminal_reward)
                 x_, r_, a_ = self.convert_data(updated_exps)
-                yield x_, r_, a_, reward_sum
+                yield x_, r_, a_, reward_sum # yield statement suspends function’s execution and sends a value back to the caller
 
                 # reset the tmax count
                 time_count = 0
